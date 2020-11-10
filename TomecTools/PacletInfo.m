@@ -1,3 +1,5 @@
+(* ::Package:: *)
+
 (* Paclet Info File *)
 
 (* created 2020/11/09*)
@@ -7,11 +9,21 @@ Paclet[
     Version -> "0.0.1",
     MathematicaVersion -> "6+",
     Description -> "Helpful everyday functions.",
+    Creator -> "Jan Tomec",
+    URL -> "https://github.com/tomecj/TomecTools",
+    
     Extensions -> 
         {
-            {"Documentation", Resources -> 
-                {"Guides/TomecTools"}
-            , Language -> "English"}
+            {
+                "Kernel",
+                Root -> ".",
+                Context -> {"TomecTools`"}
+            },
+            {
+                "Documentation",
+                Language -> "English",
+                MainPage -> "Guides/TomecTools"
+            }
         }
 ]
 
