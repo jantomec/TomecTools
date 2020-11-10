@@ -1,0 +1,310 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11803,        302]
+NotebookOptionsPosition[      7808,        216]
+NotebookOutlinePosition[      8220,        232]
+CellTagsIndexPosition[      8177,        229]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["0.0.1", "HistoryData",
+  CellTags->"New",ExpressionUUID->"6808dccc-d503-41a5-8be4-f002238949f0"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"09a6a1d5-9ff4-4e6f-9256-2815d11e89f3"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"90f90609-f5a9-4347-bd73-227e94a4dda7"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised",ExpressionUUID->"bc3ee057-766c-4604-ba66-76dda3c96147"]
+}], "History",
+ CellChangeTimes->{{3.8139335189845*^9, 3.8139335190611486`*^9}},
+ CellID->1247902091,ExpressionUUID->"a109d060-cb2a-481f-ba68-20df7a27f59f"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449,ExpressionUUID->"35a1b5d6-9205-4c64-ba90-e1e52f511063"],
+
+Cell["Guide", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507,ExpressionUUID->"9c15deb0-ce3c-481b-a2e3-476d8fb87733"],
+
+Cell["TomecTools", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->605800465,ExpressionUUID->"8390b80c-6007-47a1-a301-bb8118ea9ac6"],
+
+Cell["TomecTools`", "Categorization",
+ CellLabel->"Context",
+ CellID->468444828,ExpressionUUID->"481cae74-d536-49ab-9376-c6e6ffa62d2d"],
+
+Cell["TomecTools/guide/TomecTools", "Categorization",
+ CellLabel->"URI",ExpressionUUID->"a1f54eaa-bd94-4b6c-9230-471f7107fef5"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1427428552,ExpressionUUID->"290f6969-88ff-469c-bcd1-2b19c8c57b64"],
+
+Cell["Simple", "Keywords",
+ CellChangeTimes->{{3.813977592779475*^9, 3.8139775936116333`*^9}},
+ CellID->1251852827,ExpressionUUID->"59f99e1c-f5ab-4789-837a-56e9fe1c4fbc"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771,ExpressionUUID->"c76cecb1-4156-4e3e-a89e-9f411278d7d5"],
+
+Cell["Jan Tomec", "Details",
+ CellChangeTimes->{{3.8139776010255423`*^9, 3.813977602240543*^9}},
+ CellLabel->"Lead",
+ CellID->795394057,ExpressionUUID->"5643a00d-16ad-420a-bac6-7865bb1bf654"],
+
+Cell["Jan Tomec", "Details",
+ CellChangeTimes->{3.813977605641513*^9},
+ CellLabel->"Developers",
+ CellID->350963985,ExpressionUUID->"25db118d-f3c1-4173-8e17-c38914699aba"],
+
+Cell["Jan Tomec", "Details",
+ CellChangeTimes->{3.813977606361567*^9},
+ CellLabel->"Authors",
+ CellID->802101,ExpressionUUID->"08fafab7-134c-4554-a0ac-84e5b7f09588"],
+
+Cell["TomecTools", "Details",
+ CellChangeTimes->{{3.8139776190370913`*^9, 3.8139776207023687`*^9}},
+ CellLabel->"Feature Name",
+ CellID->509823116,ExpressionUUID->"559f1534-228f-436c-9bfc-f6253a07520a"],
+
+Cell["Jan Tomec", "Details",
+ CellChangeTimes->{3.813977643273179*^9},
+ CellLabel->"QA",
+ CellID->199884516,ExpressionUUID->"30ef53bd-becb-4107-bfed-d347e1d0a5c4"],
+
+Cell["Wolfram Mathematica", "Details",
+ CellChangeTimes->{{3.813977665106234*^9, 3.813977669864834*^9}},
+ CellLabel->"DA",
+ CellID->463951815,ExpressionUUID->"9537e4bb-e71c-4559-9e65-1ffd2772ec90"],
+
+Cell["TomecTools/Documentation", "Details",
+ CellChangeTimes->{{3.813977678178548*^9, 3.8139776848948603`*^9}},
+ CellLabel->"Docs",
+ CellID->8237523,ExpressionUUID->"2f34befe-a355-4332-9d2b-8b01eda00bbd"],
+
+Cell["Useful everyday functions to simplify routine tasks.", "Details",
+ CellChangeTimes->{{3.8139777264895277`*^9, 3.813977728061418*^9}},
+ CellLabel->"Features Page Notes",
+ CellID->813936640,ExpressionUUID->"3983b889-983d-463d-9f3a-c70717639be4"],
+
+Cell["\<\
+Development is in progress. Available features have been tested, more \
+features are coming.\
+\>", "Details",
+ CellChangeTimes->{{3.81397773711765*^9, 3.813977779091723*^9}},
+ CellLabel->"Comments",
+ CellID->240026365,ExpressionUUID->"1241ffc0-9990-4fdf-b8d5-a27e5242f695"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["TomecTools", "GuideTitle",
+ CellID->942062912,ExpressionUUID->"03fe0b88-add1-45d4-9164-54e2105e2dc1"],
+
+Cell["\<\
+TomecTools package provides useful everyday functions to simplify routine \
+tasks.\
+\>", "GuideAbstract",
+ CellChangeTimes->{{3.813933553497876*^9, 3.813933580790925*^9}},
+ CellID->2001916300,ExpressionUUID->"eafd62a9-dda4-4d25-b058-2d720a3b1d06"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Array Manipulation", "GuideFunctionsSection",
+ CellChangeTimes->{{3.8139335902626457`*^9, 3.813933593885713*^9}},
+ CellID->1866139230,ExpressionUUID->"d12b86d1-e945-4ab5-bf86-864deabcae53"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["ReshapeArray",
+   BaseStyle->"Hyperlink",
+   ButtonData->{
+     FrontEnd`FileName[{
+       ParentDirectory[], "ReferencePages", "Symbols"}, "ReshapeArray.nb", 
+      CharacterEncoding -> "UTF-8"], None}]], "InlineGuideFunction",
+  ExpressionUUID->"a289e3cd-fb5e-4a07-ae9f-6bdc0bc43a23"],
+ " \[LongDash] reshape array allowing one dimension to be Automatic."
+}], "GuideText",
+ CellChangeTimes->{{3.813933604933668*^9, 3.81393360720605*^9}, {
+  3.813933645861562*^9, 3.813933672141128*^9}, {3.813974891305253*^9, 
+  3.813974891305283*^9}, {3.813974990317018*^9, 3.813974990317051*^9}, {
+  3.81397514208041*^9, 3.813975142080442*^9}, {3.81397547694809*^9, 
+  3.8139754769481287`*^9}},
+ CellID->203374175,ExpressionUUID->"2bea5422-42f5-48e5-9a98-2a441ba06176"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "GuideTutorialsSection",
+ CellID->415694126,ExpressionUUID->"87c763be-2da2-491c-8cb6-cf6733a1a60e"],
+
+Cell[TextData[ButtonBox["Overview",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[], "Tutorials"}, "TomecToolsOverview.nb", 
+    CharacterEncoding -> "UTF-8"], None}]], "GuideTutorial",
+ CellChangeTimes->{{3.8139756899533987`*^9, 3.8139757188506737`*^9}},
+ CellID->896873889,ExpressionUUID->"d9cd2cc1-b0d6-422a-a3c0-c406c618bc29"],
+
+Cell[TextData[ButtonBox["Array Manipulation",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   FrontEnd`FileName[{
+     ParentDirectory[], "Tutorials"}, "ArrayManipulation.nb", 
+    CharacterEncoding -> "UTF-8"], None}]], "GuideTutorial",
+ CellChangeTimes->{{3.813975632430923*^9, 3.813975684316195*^9}},
+ CellID->806871991,ExpressionUUID->"639bedff-6bc7-48be-a296-bdac1e7a92d5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "GuideMoreAboutSection",
+ CellID->23220180,ExpressionUUID->"1716b302-c25f-49f8-a38c-55399f5670f7"],
+
+Cell[TextData[ButtonBox["Develpoment Page",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["https://github.com/tomecj/TomecTools"], None},
+ ButtonNote->"https://github.com/tomecj/TomecTools"]], "GuideMoreAbout",
+ CellChangeTimes->{{3.813977506852846*^9, 3.813977521014894*^9}, {
+  3.813977559937718*^9, 3.813977559938033*^9}},
+ CellID->1567025153,ExpressionUUID->"ed1a96d7-0016-40b7-b0fd-4e950c56c664"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "GuideRelatedLinksSection",
+ CellID->415694148,ExpressionUUID->"f91b4255-6a04-4075-8dc4-29a8598be5c1"],
+
+Cell[TextData[ButtonBox["List Manipulation",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   FrontEnd`FileName[{"Documentation", "English", "System", "Guides"}, 
+    "ListManipulation.nb", CharacterEncoding -> "UTF-8"], 
+   None}]], "GuideRelatedLinks",
+ CellChangeTimes->{{3.8139773070724277`*^9, 3.813977307907433*^9}, {
+  3.813977392559593*^9, 3.8139773925598717`*^9}, {3.813977456056381*^9, 
+  3.813977484026664*^9}},
+ CellID->1177482684,ExpressionUUID->"73d49b9c-cba8-46fc-a84e-1d99170e4e0b"]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{Automatic, 674}, {Automatic, 158}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "GuidePageStyles.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 668, 15, 24, "History",ExpressionUUID->"a109d060-cb2a-481f-ba68-20df7a27f59f",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[1251, 39, 123, 1, 29, "CategorizationSection",ExpressionUUID->"35a1b5d6-9205-4c64-ba90-e1e52f511063",
+ CellID->1122911449],
+Cell[1377, 42, 133, 2, 30, "Categorization",ExpressionUUID->"9c15deb0-ce3c-481b-a2e3-476d8fb87733",
+ CellID->686433507],
+Cell[1513, 46, 138, 2, 30, "Categorization",ExpressionUUID->"8390b80c-6007-47a1-a301-bb8118ea9ac6",
+ CellID->605800465],
+Cell[1654, 50, 135, 2, 30, "Categorization",ExpressionUUID->"481cae74-d536-49ab-9376-c6e6ffa62d2d",
+ CellID->468444828],
+Cell[1792, 54, 127, 1, 30, "Categorization",ExpressionUUID->"a1f54eaa-bd94-4b6c-9230-471f7107fef5"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1956, 60, 111, 1, 19, "KeywordsSection",ExpressionUUID->"290f6969-88ff-469c-bcd1-2b19c8c57b64",
+ CellID->1427428552],
+Cell[2070, 63, 170, 2, 19, "Keywords",ExpressionUUID->"59f99e1c-f5ab-4789-837a-56e9fe1c4fbc",
+ CellID->1251852827]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2277, 70, 108, 1, 19, "DetailsSection",ExpressionUUID->"c76cecb1-4156-4e3e-a89e-9f411278d7d5",
+ CellID->307771771],
+Cell[2388, 73, 191, 3, 30, "Details",ExpressionUUID->"5643a00d-16ad-420a-bac6-7865bb1bf654",
+ CellID->795394057],
+Cell[2582, 78, 171, 3, 30, "Details",ExpressionUUID->"25db118d-f3c1-4173-8e17-c38914699aba",
+ CellID->350963985],
+Cell[2756, 83, 165, 3, 30, "Details",ExpressionUUID->"08fafab7-134c-4554-a0ac-84e5b7f09588",
+ CellID->802101],
+Cell[2924, 88, 202, 3, 30, "Details",ExpressionUUID->"559f1534-228f-436c-9bfc-f6253a07520a",
+ CellID->509823116],
+Cell[3129, 93, 163, 3, 30, "Details",ExpressionUUID->"30ef53bd-becb-4107-bfed-d347e1d0a5c4",
+ CellID->199884516],
+Cell[3295, 98, 197, 3, 30, "Details",ExpressionUUID->"9537e4bb-e71c-4559-9e65-1ffd2772ec90",
+ CellID->463951815],
+Cell[3495, 103, 204, 3, 30, "Details",ExpressionUUID->"2f34befe-a355-4332-9d2b-8b01eda00bbd",
+ CellID->8237523],
+Cell[3702, 108, 249, 3, 30, "Details",ExpressionUUID->"3983b889-983d-463d-9f3a-c70717639be4",
+ CellID->813936640],
+Cell[3954, 113, 283, 6, 46, "Details",ExpressionUUID->"1241ffc0-9990-4fdf-b8d5-a27e5242f695",
+ CellID->240026365]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4274, 124, 107, 1, 77, "GuideTitle",ExpressionUUID->"03fe0b88-add1-45d4-9164-54e2105e2dc1",
+ CellID->942062912],
+Cell[4384, 127, 257, 5, 27, "GuideAbstract",ExpressionUUID->"eafd62a9-dda4-4d25-b058-2d720a3b1d06",
+ CellID->2001916300]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4678, 137, 195, 2, 70, "GuideFunctionsSection",ExpressionUUID->"d12b86d1-e945-4ab5-bf86-864deabcae53",
+ CellID->1866139230],
+Cell[4876, 141, 800, 16, 25, "GuideText",ExpressionUUID->"2bea5422-42f5-48e5-9a98-2a441ba06176",
+ CellID->203374175]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5713, 162, 117, 1, 72, "GuideTutorialsSection",ExpressionUUID->"87c763be-2da2-491c-8cb6-cf6733a1a60e",
+ CellID->415694126],
+Cell[5833, 165, 368, 7, 22, "GuideTutorial",ExpressionUUID->"d9cd2cc1-b0d6-422a-a3c0-c406c618bc29",
+ CellID->896873889],
+Cell[6204, 174, 373, 7, 22, "GuideTutorial",ExpressionUUID->"639bedff-6bc7-48be-a296-bdac1e7a92d5",
+ CellID->806871991]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6614, 186, 117, 1, 72, "GuideMoreAboutSection",ExpressionUUID->"1716b302-c25f-49f8-a38c-55399f5670f7",
+ CellID->23220180],
+Cell[6734, 189, 402, 7, 22, "GuideMoreAbout",ExpressionUUID->"ed1a96d7-0016-40b7-b0fd-4e950c56c664",
+ CellID->1567025153]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7173, 201, 124, 1, 72, "GuideRelatedLinksSection",ExpressionUUID->"f91b4255-6a04-4075-8dc4-29a8598be5c1",
+ CellID->415694148],
+Cell[7300, 204, 492, 9, 22, "GuideRelatedLinks",ExpressionUUID->"73d49b9c-cba8-46fc-a84e-1d99170e4e0b",
+ CellID->1177482684]
+}, Open  ]]
+}
+]
+*)
+

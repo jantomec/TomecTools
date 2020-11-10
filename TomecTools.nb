@@ -1,0 +1,54 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 12.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1313,         44]
+NotebookOptionsPosition[       933,         30]
+NotebookOutlinePosition[      1272,         45]
+CellTagsIndexPosition[      1229,         42]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "TomecTools`"}]], "Input",
+ CellChangeTimes->{{3.8139325454568787`*^9, 3.813932556323724*^9}},
+ CellLabel->"In[34]:=",ExpressionUUID->"5a87450b-6e1c-4fde-be3f-820ed7b604c2"],
+
+Cell[BoxData["ReshapeArray"], "Input",
+ CellChangeTimes->{{3.8139325595191708`*^9, 
+  3.813932562713809*^9}},ExpressionUUID->"98cd2295-ee02-4507-b1ef-\
+6ef6d4bb84d1"]
+},
+WindowSize->{808, 911},
+WindowMargins->{{876, Automatic}, {Automatic, 199}},
+FrontEndVersion->"12.0 for Mac OS X x86 (64-bit) (April 8, 2019)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 202, 3, 30, "Input",ExpressionUUID->"5a87450b-6e1c-4fde-be3f-820ed7b604c2"],
+Cell[763, 25, 166, 3, 30, "Input",ExpressionUUID->"98cd2295-ee02-4507-b1ef-6ef6d4bb84d1"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
