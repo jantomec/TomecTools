@@ -14,13 +14,11 @@ Paclet[
     
     Extensions -> 
         {
-            {
-                "Kernel",
-                Root -> ".",
+            {"Kernel",
+                Root -> "Kernel",
                 Context -> {"TomecTools`"}
             },
-            {
-                "Documentation",
+            {"Documentation",
                 Language -> "English",
                 MainPage -> "Guides/TomecTools"
             }
