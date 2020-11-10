@@ -1,3 +1,5 @@
+(* ::Package:: *)
+
 (* Wolfram Language Package *)
 
 (* Created by the Wolfram Workbench 9 Nov 2020 *)
@@ -8,9 +10,19 @@ BeginPackage["TomecTools`"]
 ClearAll["`*","`*`*"];
 
 ReshapeArray;
+DropFirst;
 
 (* Implementation of the package *)
 Begin["`Private`"]
+
+
+DropFirst//ClearAll
+DropFirst::usage="DropFirst[list] returns the list without its first element.";
+
+DropFirst//SyntaxInformation={"ArgumentsPattern"->{_}};
+
+DropFirst[list_List]:=Drop[list,1]
+
 
 ReshapeArray//ClearAll
 ReshapeArray::usage="ReshapeArray[array, shape] reshape array allowing one dimension to be Automatic.";
@@ -20,9 +32,6 @@ ReshapeArray::baddim="This array is not suitable for reshaping: check dimensions
 
 ReshapeArray//SyntaxInformation={"ArgumentsPattern"->{_,_}};
 
-ReshapeArray[mesh_ElementMesh,list_List]:=Fold[AddMeshMarkers[#1,#2]&,mesh,list];
-
-(* TODO: Add FrontEnd autocomplete for type argument. *)
 ReshapeArray[array_List,shape_List]:=Module[
 	{dimensions,flatArray,noElements,n,a,newShape},
 	
