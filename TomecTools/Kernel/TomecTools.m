@@ -11,6 +11,8 @@ ClearAll["`*","`*`*"];
 
 ReshapeArray;
 DropFirst;
+ToTikzFormat;
+CopyToTikzFormat;
 
 (* Implementation of the package *)
 Begin["`Private`"]
