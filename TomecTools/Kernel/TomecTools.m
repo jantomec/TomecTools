@@ -59,6 +59,49 @@ ReshapeArray[array_List,shape_List]:=Module[
 ];
 
 
+ToTikzFormat//ClearAll
+ToTikzFormat::usage="ToTikzFormat[list] converts a list into a LaTeX package Tikz format.";
+ToTikzFormat::badshape="List must be a point or a set of points.";
+
+ToTikzFormat//SyntaxInformation={"ArgumentsPattern"->{_}};
+
+ToTikzFormat[list_List]:=Module[
+	{dimensions, s},
+	
+	dimensions=Dimensions[list];
+	s="";
+	
+	If[
+		Last@dimensions!=2,
+		Message[ReshapeArray::badshape];Return[Null,Module]
+	];
+	Switch[
+		Length@dimensions,
+		1,s=StringReplace[
+			ToString[N@list],
+			{"{" -> "(", "}" -> ")"}
+		]<>" ",
+		2,Do[
+			s=s<>StringReplace[
+				ToString[N@list[[i]]],
+				{"{" -> "(", "}" -> ")"}
+			]<>" ",
+			{i,First@dimensions}
+		],
+		_,Message[ReshapeArray::badshape];Return[Null,Module]
+	];
+	StringDrop[s,-1]
+];
+
+
+CopyToTikzFormat//ClearAll
+CopyToTikzFormat::usage="ToTikzFormat[list] converts a list into a LaTeX package Tikz format and copies it into the clipboard.";
+
+CopyToTikzFormat//SyntaxInformation={"ArgumentsPattern"->{_}};
+
+CopyToTikzFormat[list_List]:=CopyToClipboard[ToTikzFormat[list]];
+
+
 End[]
 
 EndPackage[]
