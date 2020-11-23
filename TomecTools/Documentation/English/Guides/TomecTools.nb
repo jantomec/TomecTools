@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     13891,        354]
-NotebookOptionsPosition[      9025,        250]
-NotebookOutlinePosition[      9792,        274]
-CellTagsIndexPosition[      9749,        271]
+NotebookDataLength[     14518,        369]
+NotebookOptionsPosition[      9533,        263]
+NotebookOutlinePosition[     10300,        287]
+CellTagsIndexPosition[     10257,        284]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -151,6 +151,19 @@ Cell[TextData[{
 }], "GuideText",
  CellChangeTimes->{{3.813992548924271*^9, 3.813992577701079*^9}},
  CellID->528422415,ExpressionUUID->"4b27fa03-af1e-476d-b396-9169c2ed83e2"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["RemoveRowsColumns",
+   BaseStyle->"Link",
+   ButtonData->"paclet:TomecTools/ref/RemoveRowsColumns"]], 
+  "InlineGuideFunction",ExpressionUUID->
+  "9493b7d7-42bb-4563-a1ec-d1aa34463271"],
+ " \[LongDash] removes column and row at specified positions."
+}], "GuideText",
+ CellChangeTimes->{{3.815114008546343*^9, 3.815114014328583*^9}, {
+  3.8151141658356543`*^9, 3.8151141724345007`*^9}},
+ CellID->1643177829,ExpressionUUID->"68ba339f-6de5-4f08-b964-0cc30d8f79d7"],
 
 Cell[TextData[{
  Cell[BoxData[
@@ -325,35 +338,37 @@ Cell[4785, 139, 195, 2, 70, "GuideFunctionsSection",ExpressionUUID->"d12b86d1-e9
  CellID->1866139230],
 Cell[4983, 143, 425, 9, 25, "GuideText",ExpressionUUID->"4b27fa03-af1e-476d-b396-9169c2ed83e2",
  CellID->528422415],
-Cell[5411, 154, 448, 9, 25, "GuideText",ExpressionUUID->"48033aaa-cc47-420b-b584-8669fd87d35e",
+Cell[5411, 154, 505, 11, 25, "GuideText",ExpressionUUID->"68ba339f-6de5-4f08-b964-0cc30d8f79d7",
+ CellID->1643177829],
+Cell[5919, 167, 448, 9, 25, "GuideText",ExpressionUUID->"48033aaa-cc47-420b-b584-8669fd87d35e",
  CellID->1345129587]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[5896, 168, 232, 3, 70, "GuideFunctionsSection",ExpressionUUID->"860ff9e4-c876-4e31-93c9-9af9a5a843fe",
+Cell[6404, 181, 232, 3, 70, "GuideFunctionsSection",ExpressionUUID->"860ff9e4-c876-4e31-93c9-9af9a5a843fe",
  CellID->273561560],
-Cell[6131, 173, 443, 9, 25, "GuideText",ExpressionUUID->"c17ed208-90c6-476e-bb23-2537d7744dfb",
+Cell[6639, 186, 443, 9, 25, "GuideText",ExpressionUUID->"c17ed208-90c6-476e-bb23-2537d7744dfb",
  CellID->518544405],
-Cell[6577, 184, 489, 11, 41, "GuideText",ExpressionUUID->"a7e6adcd-1f14-4041-95bd-96ef5143f76f",
+Cell[7085, 197, 489, 11, 41, "GuideText",ExpressionUUID->"a7e6adcd-1f14-4041-95bd-96ef5143f76f",
  CellID->188364797]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7103, 200, 117, 1, 72, "GuideTutorialsSection",ExpressionUUID->"87c763be-2da2-491c-8cb6-cf6733a1a60e",
+Cell[7611, 213, 117, 1, 72, "GuideTutorialsSection",ExpressionUUID->"87c763be-2da2-491c-8cb6-cf6733a1a60e",
  CellID->415694126],
-Cell[7223, 203, 280, 5, 22, "GuideTutorial",ExpressionUUID->"1036d84e-c27a-48c7-88dc-e1aa6923ebe4",
+Cell[7731, 216, 280, 5, 22, "GuideTutorial",ExpressionUUID->"1036d84e-c27a-48c7-88dc-e1aa6923ebe4",
  CellID->246619713],
-Cell[7506, 210, 288, 5, 22, "GuideTutorial",ExpressionUUID->"1b0e7a86-0414-4193-8bd3-d2bef73c9404",
+Cell[8014, 223, 288, 5, 22, "GuideTutorial",ExpressionUUID->"1b0e7a86-0414-4193-8bd3-d2bef73c9404",
  CellID->1608208441]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7831, 220, 117, 1, 72, "GuideMoreAboutSection",ExpressionUUID->"1716b302-c25f-49f8-a38c-55399f5670f7",
+Cell[8339, 233, 117, 1, 72, "GuideMoreAboutSection",ExpressionUUID->"1716b302-c25f-49f8-a38c-55399f5670f7",
  CellID->23220180],
-Cell[7951, 223, 402, 7, 22, "GuideMoreAbout",ExpressionUUID->"ed1a96d7-0016-40b7-b0fd-4e950c56c664",
+Cell[8459, 236, 402, 7, 22, "GuideMoreAbout",ExpressionUUID->"ed1a96d7-0016-40b7-b0fd-4e950c56c664",
  CellID->1567025153]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8390, 235, 124, 1, 72, "GuideRelatedLinksSection",ExpressionUUID->"f91b4255-6a04-4075-8dc4-29a8598be5c1",
+Cell[8898, 248, 124, 1, 72, "GuideRelatedLinksSection",ExpressionUUID->"f91b4255-6a04-4075-8dc4-29a8598be5c1",
  CellID->415694148],
-Cell[8517, 238, 492, 9, 22, "GuideRelatedLinks",ExpressionUUID->"73d49b9c-cba8-46fc-a84e-1d99170e4e0b",
+Cell[9025, 251, 492, 9, 22, "GuideRelatedLinks",ExpressionUUID->"73d49b9c-cba8-46fc-a84e-1d99170e4e0b",
  CellID->1177482684]
 }, Open  ]]
 }

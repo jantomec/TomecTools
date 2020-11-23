@@ -1,5 +1,13 @@
 (* ::Package:: *)
 
+(* ::Title:: *)
+(*TomecTools package*)
+
+
+(* ::Section::Closed:: *)
+(*Header*)
+
+
 (* Wolfram Language Package *)
 
 (* Created by the Wolfram Workbench 9 Nov 2020 *)
@@ -11,11 +19,21 @@ ClearAll["`*","`*`*"];
 
 ReshapeArray;
 DropFirst;
+RemoveRowsColumns;
+
 ToTikzFormat;
 CopyToTikzFormat;
 
 (* Implementation of the package *)
 Begin["`Private`"]
+
+
+(* ::Section::Closed:: *)
+(*Array Manipulation*)
+
+
+(* ::Subsection::Closed:: *)
+(*DropFirst*)
 
 
 DropFirst//ClearAll
@@ -24,6 +42,28 @@ DropFirst::usage="DropFirst[list] returns the list without its first element.";
 DropFirst//SyntaxInformation={"ArgumentsPattern"->{_}};
 
 DropFirst[list_List]:=Drop[list,1]
+
+
+(* ::Subsection::Closed:: *)
+(*RemoveRowsColumns*)
+
+
+RemoveRowsColumns//ClearAll;
+RemoveRowsColumns::usage="RemoveRowsColumns[array, shape] removes column and row at specified positions.";
+
+RemoveRowsColumns//SyntaxInformation={"ArgumentsPattern"->{_,_,_}};
+
+RemoveRowsColumns[expr_List,row_List,col_List]:=Module[
+	{M=expr},
+	M=Delete[M,ArrayReshape[row,{Length@row,1}]];
+	Transpose[
+		Delete[Transpose[M],ArrayReshape[col,{Length@col,1}]]
+	]
+];
+
+
+(* ::Subsection::Closed:: *)
+(*ReshapeArray*)
 
 
 ReshapeArray//ClearAll
@@ -61,6 +101,14 @@ ReshapeArray[array_List,shape_List]:=Module[
 ];
 
 
+(* ::Section::Closed:: *)
+(*Compatibility*)
+
+
+(* ::Subsection::Closed:: *)
+(*ToTikzFormat*)
+
+
 ToTikzFormat//ClearAll
 ToTikzFormat::usage="ToTikzFormat[list] converts a list into a LaTeX package Tikz format.";
 ToTikzFormat::badshape="List must be a point or a set of points.";
@@ -96,12 +144,20 @@ ToTikzFormat[list_List]:=Module[
 ];
 
 
+(* ::Subsection::Closed:: *)
+(*CopyToTikzFormat*)
+
+
 CopyToTikzFormat//ClearAll
 CopyToTikzFormat::usage="ToTikzFormat[list] converts a list into a LaTeX package Tikz format and copies it into the clipboard.";
 
 CopyToTikzFormat//SyntaxInformation={"ArgumentsPattern"->{_}};
 
 CopyToTikzFormat[list_List]:=CopyToClipboard[ToTikzFormat[list]];
+
+
+(* ::Section::Closed:: *)
+(*End*)
 
 
 End[]
