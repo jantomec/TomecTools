@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     14518,        369]
-NotebookOptionsPosition[      9533,        263]
-NotebookOutlinePosition[     10300,        287]
-CellTagsIndexPosition[     10257,        284]
+NotebookDataLength[     16139,        408]
+NotebookOptionsPosition[     10754,        294]
+NotebookOutlinePosition[     11521,        318]
+CellTagsIndexPosition[     11478,        315]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -174,7 +174,19 @@ Cell[TextData[{
  " \[LongDash] reshape array allowing one dimension to be Automatic."
 }], "GuideText",
  CellChangeTimes->{{3.813992589784802*^9, 3.8139926064153023`*^9}},
- CellID->1345129587,ExpressionUUID->"48033aaa-cc47-420b-b584-8669fd87d35e"]
+ CellID->1345129587,ExpressionUUID->"48033aaa-cc47-420b-b584-8669fd87d35e"],
+
+Cell[TextData[{
+ ButtonBox["DataDilution",
+  BaseStyle->"Link",
+  ButtonData->"paclet:TomecTools/ref/DataDilution"],
+ " \[LongDash] reduction of the number of points by evaluation of the \
+distance between them."
+}], "GuideText",
+ CellChangeTimes->{{3.813992589784802*^9, 3.8139926064153023`*^9}, {
+  3.818147600335305*^9, 3.8181476194037933`*^9}, {3.8181477306204348`*^9, 
+  3.818147766248968*^9}},
+ CellID->352532480,ExpressionUUID->"e938b550-6c69-414f-aed4-049cb49403ad"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -207,6 +219,25 @@ into the clipboard."
 }], "GuideText",
  CellChangeTimes->{{3.814258352331983*^9, 3.8142583968236837`*^9}},
  CellID->188364797,ExpressionUUID->"a7e6adcd-1f14-4041-95bd-96ef5143f76f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Approximation", "GuideFunctionsSection",
+ CellChangeTimes->{{3.8139335902626457`*^9, 3.813933593885713*^9}, {
+  3.814258418983341*^9, 3.8142584215705557`*^9}, {3.818147718818701*^9, 
+  3.818147720427253*^9}},
+ CellID->556306882,ExpressionUUID->"aa02975f-2a48-454f-aee6-20322bc0992c"],
+
+Cell[TextData[{
+ ButtonBox["SplineApproximation",
+  BaseStyle->"Link",
+  ButtonData->"paclet:TomecTools/ref/SplineApproximation"],
+ "\[LongDash] creates a piecewise continous spline approximation of data."
+}], "GuideText",
+ CellChangeTimes->{{3.814258352331983*^9, 3.8142583939280033`*^9}, {
+  3.818147782001383*^9, 3.818147799921753*^9}},
+ CellID->1853450383,ExpressionUUID->"3cf34c43-38b5-4d16-8e8a-691f43ab0184"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -262,7 +293,7 @@ Cell[TextData[ButtonBox["List Manipulation",
 }, Open  ]]
 },
 WindowSize->{700, 770},
-WindowMargins->{{497, Automatic}, {Automatic, 129}},
+WindowMargins->{{Automatic, 699}, {Automatic, 188}},
 TaggingRules->{
  "DocuToolsSettings" -> {
    "$ApplicationName" -> "TomecTools", "$LinkBase" -> "TomecTools", 
@@ -341,34 +372,42 @@ Cell[4983, 143, 425, 9, 25, "GuideText",ExpressionUUID->"4b27fa03-af1e-476d-b396
 Cell[5411, 154, 505, 11, 25, "GuideText",ExpressionUUID->"68ba339f-6de5-4f08-b964-0cc30d8f79d7",
  CellID->1643177829],
 Cell[5919, 167, 448, 9, 25, "GuideText",ExpressionUUID->"48033aaa-cc47-420b-b584-8669fd87d35e",
- CellID->1345129587]
+ CellID->1345129587],
+Cell[6370, 178, 474, 10, 38, "GuideText",ExpressionUUID->"e938b550-6c69-414f-aed4-049cb49403ad",
+ CellID->352532480]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6404, 181, 232, 3, 70, "GuideFunctionsSection",ExpressionUUID->"860ff9e4-c876-4e31-93c9-9af9a5a843fe",
+Cell[6881, 193, 232, 3, 70, "GuideFunctionsSection",ExpressionUUID->"860ff9e4-c876-4e31-93c9-9af9a5a843fe",
  CellID->273561560],
-Cell[6639, 186, 443, 9, 25, "GuideText",ExpressionUUID->"c17ed208-90c6-476e-bb23-2537d7744dfb",
+Cell[7116, 198, 443, 9, 25, "GuideText",ExpressionUUID->"c17ed208-90c6-476e-bb23-2537d7744dfb",
  CellID->518544405],
-Cell[7085, 197, 489, 11, 41, "GuideText",ExpressionUUID->"a7e6adcd-1f14-4041-95bd-96ef5143f76f",
+Cell[7562, 209, 489, 11, 41, "GuideText",ExpressionUUID->"a7e6adcd-1f14-4041-95bd-96ef5143f76f",
  CellID->188364797]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7611, 213, 117, 1, 72, "GuideTutorialsSection",ExpressionUUID->"87c763be-2da2-491c-8cb6-cf6733a1a60e",
+Cell[8088, 225, 289, 4, 70, "GuideFunctionsSection",ExpressionUUID->"aa02975f-2a48-454f-aee6-20322bc0992c",
+ CellID->556306882],
+Cell[8380, 231, 415, 8, 22, "GuideText",ExpressionUUID->"3cf34c43-38b5-4d16-8e8a-691f43ab0184",
+ CellID->1853450383]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8832, 244, 117, 1, 72, "GuideTutorialsSection",ExpressionUUID->"87c763be-2da2-491c-8cb6-cf6733a1a60e",
  CellID->415694126],
-Cell[7731, 216, 280, 5, 22, "GuideTutorial",ExpressionUUID->"1036d84e-c27a-48c7-88dc-e1aa6923ebe4",
+Cell[8952, 247, 280, 5, 22, "GuideTutorial",ExpressionUUID->"1036d84e-c27a-48c7-88dc-e1aa6923ebe4",
  CellID->246619713],
-Cell[8014, 223, 288, 5, 22, "GuideTutorial",ExpressionUUID->"1b0e7a86-0414-4193-8bd3-d2bef73c9404",
+Cell[9235, 254, 288, 5, 22, "GuideTutorial",ExpressionUUID->"1b0e7a86-0414-4193-8bd3-d2bef73c9404",
  CellID->1608208441]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8339, 233, 117, 1, 72, "GuideMoreAboutSection",ExpressionUUID->"1716b302-c25f-49f8-a38c-55399f5670f7",
+Cell[9560, 264, 117, 1, 72, "GuideMoreAboutSection",ExpressionUUID->"1716b302-c25f-49f8-a38c-55399f5670f7",
  CellID->23220180],
-Cell[8459, 236, 402, 7, 22, "GuideMoreAbout",ExpressionUUID->"ed1a96d7-0016-40b7-b0fd-4e950c56c664",
+Cell[9680, 267, 402, 7, 22, "GuideMoreAbout",ExpressionUUID->"ed1a96d7-0016-40b7-b0fd-4e950c56c664",
  CellID->1567025153]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[8898, 248, 124, 1, 72, "GuideRelatedLinksSection",ExpressionUUID->"f91b4255-6a04-4075-8dc4-29a8598be5c1",
+Cell[10119, 279, 124, 1, 72, "GuideRelatedLinksSection",ExpressionUUID->"f91b4255-6a04-4075-8dc4-29a8598be5c1",
  CellID->415694148],
-Cell[9025, 251, 492, 9, 22, "GuideRelatedLinks",ExpressionUUID->"73d49b9c-cba8-46fc-a84e-1d99170e4e0b",
+Cell[10246, 282, 492, 9, 22, "GuideRelatedLinks",ExpressionUUID->"73d49b9c-cba8-46fc-a84e-1d99170e4e0b",
  CellID->1177482684]
 }, Open  ]]
 }

@@ -116,7 +116,7 @@ DataDilutionHelper[list_, threshold_] := Module[
 ]
 
 DataDilution//ClearAll
-DataDilution::usage="DataDilution[list, threshold] reduces deviation of data points by removing redundant points.";
+DataDilution::usage="DataDilution[list, threshold] reduces the number points of points where points are close together by replacing them with their average value.";
 
 DataDilution[list_, threshold_] := Module[
 	{nl, new},
