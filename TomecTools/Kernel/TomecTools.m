@@ -20,9 +20,12 @@ ClearAll["`*","`*`*"];
 ReshapeArray;
 DropFirst;
 RemoveRowsColumns;
+DataDilution;
 
 ToTikzFormat;
 CopyToTikzFormat;
+
+SplineApproximation;
 
 (* Implementation of the package *)
 Begin["`Private`"]
@@ -100,6 +103,32 @@ ReshapeArray[array_List,shape_List]:=Module[
 	ArrayReshape[array,newShape]
 ];
 
+(* ::Subsection::Closed:: *)
+(*DataDilution*)
+DataDilutionHelper[list_, threshold_] := Module[
+	{r, pos, nl, new},
+	r = Diagonal[DistanceMatrix[list], 1];
+	pos = Flatten[Position[r, _?(# < threshold &)]];
+	new = (list[[pos]] + list[[pos + 1]])/2;
+	nl = list;
+	nl[[Riffle[pos, pos + 1]]] = Riffle[new, new];
+	DeleteDuplicates[nl]
+]
+
+DataDilution//ClearAll
+DataDilution::usage="DataDilution[list, threshold] reduces deviation of data points by removing redundant points.";
+
+DataDilution[list_, threshold_] := Module[
+	{nl, new},
+	nl = list;
+	While[
+		new = DataDilutionHelper[nl, threshold];
+		nl != new,
+		nl = new
+	];
+	nl
+]
+
 
 (* ::Section::Closed:: *)
 (*Compatibility*)
@@ -155,6 +184,96 @@ CopyToTikzFormat//SyntaxInformation={"ArgumentsPattern"->{_}};
 
 CopyToTikzFormat[list_List]:=CopyToClipboard[ToTikzFormat[list]];
 
+(* ::Section::Closed:: *)
+(*Data Approximation*)
+
+
+(* ::Subsection::Closed:: *)
+(*SplineApproximation*)
+
+SplineApproximation//ClearAll
+SplineApproximation::usage="SplineApproximation creates a piecewise continous spline approximation of data.";
+
+SplineApproximation[data_, nPieces_Integer, order_, continuationOrder_] := Module[
+	{
+		a, b, c, cond, pars, f, fit, modelf
+    },
+    a = First[First[data]];
+    b = First[Last[data]];
+    cond = Partition[Subdivide[a, b, nPieces], 2, 1];
+    f[x_] = Piecewise[
+    	Table[
+    		{
+    			Sum[Subscript[c, {i, j}] x^j, {j, 0, order}],
+    			cond[[i, 1]] <= x <= cond[[i, 2]]
+    		},
+    		{i, nPieces}
+    	]
+    ];
+    pars = Flatten[Table[
+    	Subscript[c, {i, j}], {j, 0, order}, {i, nPieces}]
+    ];
+    fit = FindFit[
+    	data,
+    	Prepend[
+    		Flatten[
+    			Table[
+    				Limit[
+    					Derivative[j][f][x], x -> #, 
+    					Direction -> "FromAbove"
+    				] == Limit[
+    					Derivative[j][f][x], x -> #, 
+            			Direction -> "FromBelow"] & /@ Most[cond[[All, 2]]],
+        		{j, 0, continuationOrder}
+        		]
+       		],
+      		f[x]
+      	],
+      	pars, x
+    ];
+    modelf[x_] = f[x] /. fit;
+    modelf
+];
+
+SplineApproximation[data_, sep_List, order_, continuationOrder_] := Module[
+	{
+		a, b, nPieces, c, cond, pars, f, fit, modelf
+	},
+	a = First[First[data]];
+	b = First[Last[data]];
+    nPieces = Length[sep] + 1;
+    cond = Partition[Join[{a}, sep, {b}], 2, 1];
+    f[x_] = Piecewise[
+    	Table[
+    		{
+    			Sum[Subscript[c, {i, j}] x^j, {j, 0, order}],
+    			cond[[i, 1]] <= x <= cond[[i, 2]]
+    		},
+    		{i, nPieces}
+    	]
+    ];
+    pars = Flatten[Table[Subscript[c, {i, j}], {j, 0, order}, {i, nPieces}]];
+    fit = FindFit[
+    	data,
+    	Prepend[
+    		Flatten[
+    			Table[
+    				Limit[
+    					Derivative[j][f][x], x -> #, 
+    					Direction -> "FromAbove"
+    				] == Limit[
+    					Derivative[j][f][x], x -> #, 
+            			Direction -> "FromBelow"] & /@ Most[cond[[All, 2]]],
+        		{j, 0, continuationOrder}
+        		]
+       		],
+      		f[x]
+      	],
+      	pars, x
+    ];
+    modelf[x_] = f[x] /. fit;
+    modelf
+];
 
 (* ::Section::Closed:: *)
 (*End*)
