@@ -178,7 +178,7 @@ ToTikzFormat[list_List]:=Module[
 
 
 CopyToTikzFormat//ClearAll
-CopyToTikzFormat::usage="ToTikzFormat[list] converts a list into a LaTeX package Tikz format and copies it into the clipboard.";
+CopyToTikzFormat::usage="CopyToTikzFormat[list] converts a list into a LaTeX package Tikz format and copies it into the clipboard.";
 
 CopyToTikzFormat//SyntaxInformation={"ArgumentsPattern"->{_}};
 
